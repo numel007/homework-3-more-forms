@@ -34,9 +34,9 @@ Gif Search
     <p>
         Here are your GIFs:
     </p>
-        {% for gif in gifs %}       
+        {% for gif_test in gifs %}       
             <p>
-                <img src="{{gif['media'][0]['gif']['url']}}" alt="GIF">
+                <img src="{{gif_test['media'][0]['gif']['url']}}" alt="GIF">
             </p>
         {% endfor %}
 </section>
