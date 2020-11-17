@@ -190,7 +190,7 @@ def image_filter():
 # GIF SEARCH ROUTE
 ################################################################################
 
-API_KEY = 'LIVDSRZULELA'
+API_KEY = os.getenv('API_KEY')
 TENOR_URL = 'https://api.tenor.com/v1/search'
 pp = PrettyPrinter(indent=4)
 
@@ -215,7 +215,7 @@ def gif_search():
         gifs = json.loads(response.content).get('results')
 
         context = {
-            'gifs': gifs
+            'gifs': gifs,
         }
         
         pp.pprint(gifs)
